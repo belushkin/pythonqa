@@ -8,7 +8,10 @@ A container with python, flake8, and some flake8 plugins for doing static QA.
 
 Run it with your code mounted at `/app` inside the container.
 
+# Usage
 
-````
-docker run -v ${PWD}:/code belushkin/pythonqa:latest
+```bash
+docker run --rm -v $PWD:/app belushkin/pythonqa pip-compile
+docker run --rm -v $PWD:/app belushkin/pythonqa flake8
+# etc
 ````
