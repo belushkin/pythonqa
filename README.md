@@ -11,8 +11,9 @@ Run it with your code mounted at `/app` inside the container.
 ## Usage
 
 ```bash
-docker run --rm -v $PWD:/app belushkin/pythonqa pip-compile
-docker run --rm -v $PWD:/app belushkin/pythonqa flake8
+docker run --rm -v $PWD:/app nosatka/pythonqa pip-compile
+docker run --rm -v $PWD:/app nosatka/pythonqa flake8
+docker run --rm -v /home/belushkin/workspace/t-notifications/handler:/app nosatka/pythonqa python3 -m mccabe --min 5 app.py
 # etc
 ````
 
