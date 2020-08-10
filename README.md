@@ -14,6 +14,8 @@ Run it with your code mounted at `/app` inside the container.
 docker run --rm -v $PWD:/app nosatka/pythonqa pip-compile
 docker run --rm -v $PWD:/app nosatka/pythonqa flake8
 docker run --rm -v /home/belushkin/workspace/t-notifications/handler:/app nosatka/pythonqa python3 -m mccabe --min 5 app.py
+docker run --rm -v ~/workspace/t-notifications/handler:/app nosatka/pythonqa flake8 app.py
+docker run --rm -v ~/workspace/t-notifications:/app nosatka/pythonqa python -m pytest tests/ -v
 # etc
 ````
 
